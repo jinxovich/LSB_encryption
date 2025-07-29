@@ -12,7 +12,7 @@ def decode_image(image_path):
     binary_message = ''
     for row in range(pixels.shape[0]):
         for col in range(pixels.shape[1]):
-            for channel in range(3):  # RGB
+            for channel in range(3):
                 binary_message += str(int(pixels[row, col, channel]) & 1)
 
     bytes_data = bytearray()

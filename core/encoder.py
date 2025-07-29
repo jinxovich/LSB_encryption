@@ -21,7 +21,7 @@ def encode_image(image_path, secret_message):
     index = 0
     for row in range(pixels.shape[0]):
         for col in range(pixels.shape[1]):
-            for channel in range(3):  # RGB
+            for channel in range(3):
                 if index < len(binary_message):
                     current_value = int(pixels[row, col, channel])
                     new_value = (current_value & ~1) | int(binary_message[index])
